@@ -1,0 +1,26 @@
+{
+  "app": {
+    "host": "127.0.0.1",
+    "port": "8081",
+    "name": "student",
+    "mode": "debug",
+    "url": "https://api.wendy.fun"
+  },
+  "database": {
+    "driver": "mysql",
+    "maxIdle": 10,
+    "maxOpen": 30,
+    "maxLifetime": 300,
+    "mysql": {
+      "host": "127.0.0.1",
+      "port": "3306",
+      "user": "root",
+      "password": "root",
+      "db": "student"
+    }
+  },
+  "logger": {
+    "driver": "daily",
+    "path": "tmp/logs"
+  }
+}
