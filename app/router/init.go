@@ -2,8 +2,8 @@ package router
 
 import (
 	"net/http"
-	"student/app/middlerware"
-	adminRouter "student/app/router/admin"
+	"student_server/app/middlerware"
+	adminRouter "student_server/app/router/admin"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,10 +15,8 @@ func InitRouter(router *gin.Engine) {
 	})
 
 	router.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "hello world")
+		c.String(http.StatusOK, "计科201 20201131142 干宏琴")
 	})
-
-	router.StaticFile("/favicon.ico", "./favicon.ico")
 
 	router.Use(middlerware.Cors)
 	{

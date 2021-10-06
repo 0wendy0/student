@@ -3,7 +3,7 @@ package response
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	adminCode "student/lib/response/code"
+	adminCode "student_server/lib/response/code"
 )
 
 func AdminResponse(c *gin.Context, code int, data interface{}) {

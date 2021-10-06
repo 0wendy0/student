@@ -2,24 +2,21 @@ package orm
 
 import (
 	"log"
-	"student/config"
+	"student_server/config"
 	"time"
 
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"gorm.io/gorm"
 )
 
 var Db *gorm.DB
 
 func InitDatabase() {
-	driver := config.Database.Driver
-	url := config.Database.Url
 	var err error
-	Db, err = gorm.Open(driver, url)
+	Db, err = gorm.Open(config.Database.Dialect, &gorm.Config{})
 	if err != nil {
-		log.Fatal("数据库连接失败")
+		log.Fatal(err.Error())
 	}
-	sqlDb := Db.DB()
+	sqlDb, _ := Db.DB()
 	sqlDb.SetMaxIdleConns(config.Database.MaxIdle)
 	sqlDb.SetMaxOpenConns(config.Database.MaxOpen)
 	sqlDb.SetConnMaxLifetime(time.Second * config.Database.MaxLifetime)

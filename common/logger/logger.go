@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"student/config"
-	"student/lib/file"
+	"student_server/config"
+	"student_server/lib/file"
 	"time"
 )
 

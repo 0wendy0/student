@@ -4,10 +4,11 @@
     "port": "8081",
     "name": "student",
     "mode": "debug",
-    "url": "https://api.wendy.fun"
+    "url": "https://api.wendy.fun",
+    "signKey": "student123"
   },
   "database": {
-    "driver": "mysql",
+    "driver": "sqlite3",
     "maxIdle": 10,
     "maxOpen": 30,
     "maxLifetime": 300,
@@ -17,6 +18,9 @@
       "user": "root",
       "password": "root",
       "db": "student"
+    },
+    "sqlite3": {
+      "path": "./student.db"
     }
   },
   "logger": {

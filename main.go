@@ -2,10 +2,10 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"student/app/router"
-	"student/common/logger"
-	"student/common/orm"
-	"student/config"
+	"student_server/app/router"
+	"student_server/common/logger"
+	"student_server/common/orm"
+	"student_server/config"
 )
 
 func main() {
